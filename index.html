@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Treact Landing Page</title>
+  <title>Treact — Beautiful React Templates</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -11,68 +11,221 @@
 </head>
 <body>
   <header class="site-header container">
-    <a class="brand" href="#home" aria-label="Treact home">
-      <span class="brand-mark">T</span><span>Treact</span>
+    <a class="brand" href="#home">
+      <img src="https://module-2-fp-example-website.vercel.app/assets/logo.2c489fc453a1783cbadacf914efa3df6.svg" alt="Treact logo">
+      <span>Treact</span>
     </a>
-    <button class="menu-button" aria-label="Open navigation" aria-expanded="false">☰</button>
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#blog">Blog</a><a href="#pricing">Pricing</a><a href="#contact">Contact Us</a>
-      <a href="#login">Login</a><a class="nav-cta" href="#signup">Sign Up</a>
+
+    <nav class="desktop-nav">
+      <a href="#features">About</a>
+      <a href="#steps">Blog</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#footer">Contact Us</a>
+      <a class="login" href="#">Login</a>
+      <a class="signup" href="#">Sign Up</a>
     </nav>
+
+    <button class="menu-button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
 
-  <main id="home">
-    <section class="hero container">
+  <div class="mobile-menu" aria-hidden="true">
+    <button class="close-menu" aria-label="Close menu">×</button>
+    <a href="#features">About</a>
+    <a href="#steps">Blog</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#footer">Contact Us</a>
+    <a href="#">Login</a>
+    <a class="signup" href="#">Sign Up</a>
+  </div>
+
+  <main>
+    <section class="hero container" id="home">
       <div class="hero-copy">
         <h1>Beautiful React Templates <span>for you.</span></h1>
         <p>Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.</p>
-        <form class="email-form"><input type="email" placeholder="Your E-mail Address" aria-label="Email address"><button>Get Started</button></form>
-        <div class="customers"><small>OUR TRUSTED CUSTOMERS</small><div class="customer-row"><b>FORTUNE</b><b>oracle</b><b>microsoft</b></div></div>
+
+        <form class="email-form">
+          <input type="email" placeholder="Your E-mail Address" aria-label="Email address">
+          <button type="submit">Get Started</button>
+        </form>
+
+        <div class="trusted">
+          <p>OUR TRUSTED CUSTOMERS</p>
+          <img src="https://module-2-fp-example-website.vercel.app/assets/customers-logo-strip.680ac7c2e8ae28161d2c.png" alt="Trusted customer logos">
+        </div>
       </div>
-      <div class="hero-art illustration" aria-label="Business team illustration">
-        <svg viewBox="0 0 700 520" role="img"><rect x="50" y="45" width="570" height="370" rx="18" fill="#edf2f7"/><rect x="80" y="75" width="510" height="310" rx="12" fill="white"/><rect x="110" y="110" width="210" height="18" rx="9" fill="#6415ff" opacity=".25"/><rect x="110" y="150" width="350" height="12" rx="6" fill="#cbd5e0"/><rect x="110" y="180" width="300" height="12" rx="6" fill="#e2e8f0"/><circle cx="485" cy="250" r="76" fill="#6415ff" opacity=".12"/><path d="M450 265l28-34 28 24 42-57" fill="none" stroke="#6415ff" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/><circle cx="180" cy="430" r="48" fill="#f6ad55"/><rect x="145" y="465" width="72" height="45" rx="20" fill="#6415ff"/><circle cx="535" cy="430" r="48" fill="#68d391"/><rect x="500" y="465" width="72" height="45" rx="20" fill="#2d3748"/></svg>
+
+      <div class="hero-art">
+        <img src="https://module-2-fp-example-website.vercel.app/assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" alt="Person working at a computer">
       </div>
     </section>
 
-    <section id="about" class="section container center-heading">
-      <p class="eyebrow">FEATURES</p><h2>We Have Amazing <span>Service.</span></h2>
-      <p class="section-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <div class="features-grid" id="features"></div>
+    <section class="section features container" id="features">
+      <div class="section-heading centered">
+        <p class="eyebrow">FEATURES</p>
+        <h2>We Have Amazing <span>Service.</span></h2>
+        <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="icon-circle">🛡</div>
+          <div><h3>Secure</h3><p>Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.</p></div>
+        </article>
+        <article class="feature-card">
+          <div class="icon-circle">🎧</div>
+          <div><h3>24/7 Support</h3><p>Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.</p></div>
+        </article>
+        <article class="feature-card">
+          <div class="icon-circle">⚙</div>
+          <div><h3>Customizable</h3><p>Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.</p></div>
+        </article>
+        <article class="feature-card">
+          <div class="icon-circle">✓</div>
+          <div><h3>Reliable</h3><p>Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.</p></div>
+        </article>
+        <article class="feature-card">
+          <div class="icon-circle">⚡</div>
+          <div><h3>Fast</h3><p>Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.</p></div>
+        </article>
+        <article class="feature-card">
+          <div class="icon-circle">✦</div>
+          <div><h3>Easy</h3><p>Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud.</p></div>
+        </article>
+      </div>
     </section>
 
-    <section class="section split container">
-      <div><p class="eyebrow">QUALITY WORK</p><h2>Designed &amp; Developed by <span>Professionals.</span></h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quam cupiditate commodi qui excepturi laborum adipisci officiis, corporis possimus.</p><a class="button" href="#">Learn More</a></div>
-      <div class="dashboard-card"><div class="browser"><i></i><i></i><i></i></div><div class="dash-grid"><div class="sidebar"></div><div class="chart"><span></span><span></span><span></span><span></span><span></span></div></div></div>
+    <section class="section split container quality">
+      <div class="split-copy">
+        <p class="eyebrow">QUALITY WORK</p>
+        <h2>Designed &amp; Developed by <span>Professionals.</span></h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quam cupiditate commodi qui excepturi laborum adipisci officiis, corporis possimus. Reiciendis?</p>
+        <a class="primary-button" href="#">Learn More</a>
+      </div>
+      <div class="image-frame">
+        <img src="https://module-2-fp-example-website.vercel.app/assets/hero-screenshot-1.40a097b525c2f8c9808e.png" alt="Treact dashboard screenshot">
+      </div>
     </section>
 
-    <section class="section split reverse container">
-      <div class="steps-art illustration"><svg viewBox="0 0 600 480"><circle cx="300" cy="220" r="170" fill="#6415ff" opacity=".1"/><rect x="130" y="90" width="340" height="250" rx="20" fill="#fff" stroke="#e2e8f0" stroke-width="8"/><rect x="170" y="135" width="250" height="18" rx="9" fill="#6415ff"/><rect x="170" y="180" width="180" height="12" rx="6" fill="#cbd5e0"/><rect x="170" y="215" width="220" height="12" rx="6" fill="#e2e8f0"/><circle cx="210" cy="300" r="42" fill="#f6ad55"/><circle cx="390" cy="300" r="42" fill="#68d391"/></svg></div>
-      <div><p class="eyebrow">STEPS</p><h2>Easy to <span>Get Started.</span></h2><div class="steps"><article><b>01</b><div><h3>Register</h3><p>Create an account with us using Google or Facebook.</p></div></article><article><b>02</b><div><h3>Download</h3><p>Browse and download the template that you like from the marketplace.</p></div></article><article><b>03</b><div><h3>Run</h3><p>Follow the instructions to setup and customize the template to your needs.</p></div></article></div></div>
+    <section class="section split reverse container" id="steps">
+      <div class="laptop-art">
+        <img src="https://module-2-fp-example-website.vercel.app/assets/hero-screenshot-2.241aac1fbc66db29d873.png" alt="Website shown on a laptop">
+      </div>
+      <div class="split-copy">
+        <p class="eyebrow">STEPS</p>
+        <h2>Easy to <span>Get Started.</span></h2>
+        <div class="steps-list">
+          <div class="step"><span>01</span><div><h3>Register</h3><p>Create an account with us using Google or Facebook.</p></div></div>
+          <div class="step"><span>02</span><div><h3>Download</h3><p>Browse and Download the template that you like from the marketplace.</p></div></div>
+          <div class="step"><span>03</span><div><h3>Run</h3><p>Follow the instructions to setup and customize the template to your needs.</p></div></div>
+        </div>
+      </div>
     </section>
 
-    <section class="section split container">
-      <div><p class="eyebrow">VALUES</p><h2>We Always Abide by Our <span>Principles.</span></h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="values"><article><h3>✓ Affordable</h3><p>We promise to offer you the best rate we can — at par with the industry standard.</p></article><article><h3>★ Professionalism</h3><p>Our templates are designed and created by professional designers.</p></article></div><a class="button" href="#">Learn More</a></div>
-      <div class="values-art illustration"><svg viewBox="0 0 600 480"><path d="M75 370c60-190 185-290 370-270 60 7 92 49 65 103-55 112-135 207-248 272-76 44-142-17-187-105z" fill="#6415ff" opacity=".13"/><circle cx="290" cy="210" r="75" fill="#f6ad55"/><rect x="210" y="285" width="170" height="120" rx="50" fill="#6415ff"/><rect x="385" y="120" width="130" height="180" rx="16" fill="white" stroke="#e2e8f0" stroke-width="7"/><path d="M415 175h70M415 210h50M415 245h65" stroke="#6415ff" stroke-width="10" stroke-linecap="round"/></svg></div>
+    <section class="section split container values">
+      <div class="split-copy">
+        <p class="eyebrow">VALUES</p>
+        <h2>We Always Abide by Our <span>Principles.</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <div class="value-row">
+          <div class="value">
+            <h3><span class="mini-icon">💲</span> Affordable</h3>
+            <p>We promise to offer you the best rate we can — at par with the industry standard.</p>
+          </div>
+          <div class="value">
+            <h3><span class="mini-icon">💼</span> Professionalism</h3>
+            <p>We assure you that our templates are designed and created by professional designers.</p>
+          </div>
+        </div>
+        <a class="primary-button" href="#">Learn More</a>
+      </div>
+      <div class="values-art">
+        <img src="https://module-2-fp-example-website.vercel.app/assets/prototype-illustration.21bc4b3f612a2f257c3d361067582485.svg" alt="Prototype illustration">
+      </div>
     </section>
 
-    <section id="pricing" class="section container center-heading">
-      <p class="eyebrow">PRICING</p><h2>Reasonable &amp; Flexible <span>Plans.</span></h2><p class="section-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <div class="pricing-grid" id="plans"></div>
+    <section class="section pricing container" id="pricing">
+      <div class="section-heading centered">
+        <p class="eyebrow">PRICING</p>
+        <h2>Reasonable &amp; Flexible <span>Plans.</span></h2>
+        <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+
+      <div class="price-grid">
+        <article class="price-card personal">
+          <div class="top-line"></div>
+          <div class="price-head"><h3>PERSONAL</h3><strong>$17.99</strong><span>MONTHLY</span></div>
+          <div class="price-features"><h4>For Individuals</h4><p>30 Templates</p><p>7 Landing Pages</p><p>12 Internal Pages</p><p>Basic Assistance</p></div>
+          <div class="price-action"><a href="#">BUY NOW</a></div>
+        </article>
+
+        <article class="price-card featured">
+          <div class="price-head"><h3>BUSINESS</h3><strong>$37.99</strong><span>MONTHLY</span></div>
+          <div class="price-features"><h4>For Small Businesses</h4><p>60 Templates</p><p>15 Landing Pages</p><p>22 Internal Pages</p><p>Priority Assistance</p></div>
+          <div class="price-action"><a href="#">BUY NOW</a></div>
+        </article>
+
+        <article class="price-card enterprise">
+          <div class="top-line"></div>
+          <div class="price-head"><h3>ENTERPRISE</h3><strong>$57.99</strong><span>MONTHLY</span></div>
+          <div class="price-features"><h4>For Large Companies</h4><p>90 Templates</p><p>27 Landing Pages</p><p>37 Internal Pages</p><p>Personal Assistance</p></div>
+          <div class="price-action"><a href="#">BUY NOW</a></div>
+        </article>
+      </div>
     </section>
 
-    <section id="blog" class="section split reverse container">
-      <div class="testimonial-art illustration"><svg viewBox="0 0 600 470"><rect x="80" y="60" width="440" height="320" rx="30" fill="#edf2f7"/><circle cx="300" cy="190" r="85" fill="#f6ad55"/><path d="M220 185c20-100 150-110 170 0-50-35-120-35-170 0z" fill="#2d3748"/><rect x="190" y="285" width="220" height="130" rx="65" fill="#6415ff"/></svg></div>
-      <div><p class="eyebrow">TESTIMONIALS</p><h2>Our Clients <span>Love Us.</span></h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><div class="stars">★★★★★</div><h3>Amazing User Experience</h3><blockquote>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Our team loved how easy the templates were to customize.</blockquote><div class="person"><span>CH</span><div><b>Charlotte Hale</b><small>Director, Delos Inc.</small></div></div></div>
+    <section class="section split reverse container testimonials">
+      <div class="love-art">
+        <img src="https://module-2-fp-example-website.vercel.app/assets/love-illustration.c759090fa833369ad6ffb6eb19cacb3e.svg" alt="Customer love illustration">
+      </div>
+      <div class="split-copy testimonial-copy">
+        <p class="eyebrow">TESTIMONIALS</p>
+        <h2>Our Clients <span>Love Us.</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam.</p>
+        <div class="stars">★★★★★</div>
+        <h3>Amazing User Experience</h3>
+        <blockquote>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</blockquote>
+        <div class="customer">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=180&q=80" alt="Charlotte Hale">
+          <div><strong>Charlotte Hale</strong><span>Director, Delos Inc.</span></div>
+          <div class="slider-buttons"><button>←</button><button>→</button></div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="cta container"><h2>Developers all over the world are happily using Treact.</h2><div><a class="button light" href="#signup">Get Started</a><a class="button outline" href="#contact">Contact Us</a></div></section>
+    <section class="cta container">
+      <h2>Developers all over the world are happily using Treact.</h2>
+      <div>
+        <a class="cta-primary" href="#">Get Started</a>
+        <a class="cta-secondary" href="#footer">Contact Us</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-grid" id="footerLinks"></div>
-    <div class="container footer-bottom"><a class="brand light-brand" href="#home"><span class="brand-mark white">T</span><span>Treact Inc.</span></a><p>© 2018 Treact Inc. All Rights Reserved.</p><div class="social"><a href="#">f</a><a href="#">𝕏</a><a href="#">▶</a></div></div>
+  <footer id="footer">
+    <div class="footer-inner container">
+      <div class="footer-links">
+        <div><h3>MAIN</h3><a href="#">Blog</a><a href="#">FAQs</a><a href="#">Support</a><a href="#">About Us</a></div>
+        <div><h3>PRODUCT</h3><a href="#">Log In</a><a href="#">Personal</a><a href="#">Business</a><a href="#">Team</a></div>
+        <div><h3>PRESS</h3><a href="#">Logos</a><a href="#">Events</a><a href="#">Stories</a><a href="#">Office</a></div>
+        <div><h3>TEAM</h3><a href="#">Career</a><a href="#">Founders</a><a href="#">Culture</a><a href="#">Onboarding</a></div>
+        <div><h3>LEGAL</h3><a href="#">GDPR</a><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Disclaimer</a></div>
+      </div>
+
+      <div class="footer-bottom">
+        <a class="brand footer-brand" href="#home">
+          <img src="https://module-2-fp-example-website.vercel.app/assets/logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.svg" alt="Treact logo">
+          <span>Treact Inc.</span>
+        </a>
+        <p>© 2018 Treact Inc. All Rights Reserved.</p>
+        <div class="socials"><a href="#">f</a><a href="#">𝕏</a><a href="#">▶</a></div>
+      </div>
+    </div>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
-
